@@ -6,7 +6,7 @@ import { z } from "zod";
 
 const evolink = createOpenAI({
     baseURL: "https://api.evolink.ai/v1",
-    apiKey: "sk-AYtNUg9whJzuASjQLQC6tdWwXa8vc11ffO8nre1FWMeZuZLW",
+    apiKey: process.env.EVOLINK_API_KEY || "",
 });
 
 export async function generatePlan(formData: {
