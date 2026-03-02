@@ -8,6 +8,10 @@ import { Suspense } from "react";
 export const metadata: Metadata = {
     title: "Your Custom Fly Removal Plan Result",
     description: "View your customized fly removal action-plan here.",
+    robots: {
+        index: false,
+        follow: false,
+    },
 };
 
 export default function PlanResultPage({ params }: { params: { id: string } }) {

@@ -1,15 +1,32 @@
-"use client";
+import { Metadata } from 'next';
+import dynamic from "next/dynamic";
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { UpsellCta } from "@/components/shared/upsell-cta";
 import { Faq } from "@/components/shared/faq";
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-
-import { FlyIdentifierForm } from "@/components/features/identifier/fly-identifier-form";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
+
+const FlyIdentifierForm = dynamic(
+  () =>
+    import("@/components/features/identifier/fly-identifier-form").then(
+      (mod) => mod.FlyIdentifierForm
+    ),
+  {
+    loading: () => (
+      <div className="max-w-md mx-auto min-h-[420px] flex items-center justify-center text-sm text-muted-foreground">
+        Loading identifier...
+      </div>
+    ),
+  }
+);
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
+};
 
 export default function Home() {
   const faqs = [
@@ -38,34 +55,70 @@ export default function Home() {
         </div>
       </HeroGeometric>
 
-      {/* 2. Quick Answer */}
+      {/* 2. Comprehensive Guide - How to get rid of flies */}
       <section id="quick-fixes" className="w-full py-12 md:py-20 lg:py-24">
         <div className="container px-4 md:px-6">
-          <div className="mx-auto max-w-3xl space-y-8 text-center">
-            <h2 className="text-3xl font-bold tracking-tight">Fastest Ways to Get Rid of Flies</h2>
-            <p className="text-muted-foreground">Follow these 5 essential steps immediately regardless of the fly type:</p>
-            <ul className="text-left space-y-4 text-lg">
-              <li className="flex items-start">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-bold mr-4">1</span>
-                <div><strong>Remove food and trash sources:</strong> Seal all food tightly and empty indoor bins.</div>
-              </li>
-              <li className="flex items-start">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-bold mr-4">2</span>
-                <div><strong>Clean affected areas:</strong> Wipe down counters, clear sticky spills, and dry sinks.</div>
-              </li>
-              <li className="flex items-start">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-bold mr-4">3</span>
-                <div><strong>Use traps where needed:</strong> Avoid indiscriminately spraying chemicals beforehand.</div>
-              </li>
-              <li className="flex items-start">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-bold mr-4">4</span>
-                <div><strong>Seal entry points:</strong> Check window screens and door gaps.</div>
-              </li>
-              <li className="flex items-start">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-bold mr-4">5</span>
-                <div><strong>Identify the precise type:</strong> If the problem continues, you need specific strategies.</div>
-              </li>
-            </ul>
+          <div className="mx-auto max-w-4xl space-y-12">
+
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">How to Get Rid of Flies Fast</h2>
+              <p className="text-muted-foreground text-lg md:text-xl">
+                Learning exactly how to get rid of flies requires more than just swatting them one by one. You need a systematic approach to eliminate the adults, destroy the breeding sources, and prevent new flies from coming inside. Follow these essential steps immediately.
+              </p>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-2">
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold flex items-center">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-bold mr-3 text-sm">1</span>
+                  Remove Food and Trash Sources
+                </h3>
+                <p className="text-muted-foreground text-lg">
+                  The primary reason you have flies in your house is that they smell food. To get rid of flies fast, you must cut off their food supply. Seal all pantry items tightly, don't leave ripe fruit exposed, and empty indoor trash bins daily. If you have pets, ensure their food isn't left out constantly, as this is a massive attractant.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold flex items-center">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-bold mr-3 text-sm">2</span>
+                  Deep Clean Affected Areas
+                </h3>
+                <p className="text-muted-foreground text-lg">
+                  Flies lay their eggs in sticky residue, organic sludge, and rotting matter. Wipe down kitchen counters with a strong multi-surface cleaner, clear sticky spills immediately, and dry your sinks at night. Cleaning the source is the single most important step in any fly removal strategy.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold flex items-center">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-bold mr-3 text-sm">3</span>
+                  Deploy Targeted Traps
+                </h3>
+                <p className="text-muted-foreground text-lg">
+                  Once you've removed the food sources, it's time to capture the adult flies buzzing around. Use UV light traps, sticky paper, or liquid bait traps where needed. Avoid indiscriminately spraying chemical aerosols inside your kitchen, as traps are generally safer and work passively 24/7.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold flex items-center">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary font-bold mr-3 text-sm">4</span>
+                  Seal Your Home's Entry Points
+                </h3>
+                <p className="text-muted-foreground text-lg">
+                  Figuring out how to get rid of flies permanently means stopping them from coming indoors in the first place. Inspect your window screens for tiny tears. Check the weather stripping around exterior doors. Keep doors shut when cooking strong-smelling foods, as flies can detect these odors from far away.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 mt-12">
+              <h3 className="text-2xl font-bold mb-4">Why Do Flies Keep Coming Back? (The Fly Life Cycle)</h3>
+              <p className="text-muted-foreground text-lg mb-4">
+                If you are struggling with fly removal, you are likely only killing the adult flies while ignoring the eggs and larvae. A single female fly can lay hundreds of eggs at once. Depending on the temperature and the species of fly, these eggs can hatch into maggots (larvae) in less than 24 hours.
+              </p>
+              <p className="text-muted-foreground text-lg">
+                Within a few days, those larvae pupate and emerge as fully grown adult flies ready to breed again. This rapid life cycle is why a minor nuisance can explode into a severe infestation in just one week. To truly get rid of flies, your cleaning efforts must interrupt this cycle by removing the breeding ground.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
@@ -119,12 +172,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. General Removal Steps - Repeated briefly */}
-      <section className="w-full py-12 bg-muted/20">
-        <div className="container px-4 md:px-6 max-w-4xl mx-auto text-center space-y-4">
-          <h3 className="text-2xl font-bold">Need more detailed trap options?</h3>
-          <p className="text-muted-foreground">Checkout our comprehensive guide on traps.</p>
-          <Button asChild variant="secondary"><Link href="/fruit-fly-trap">Read Trap Guides</Link></Button>
+      {/* 5. Natural vs Chemical Fly Removal */}
+      <section className="w-full py-16 md:py-24 bg-card border-y">
+        <div className="container px-4 md:px-6 max-w-4xl mx-auto space-y-8">
+          <h2 className="text-3xl font-bold text-center mb-8">Natural Fly Removal vs. Chemical Traps</h2>
+
+          <div className="space-y-6">
+            <p className="text-lg text-muted-foreground">
+              When figuring out how to get rid of flies, many people immediately reach for toxic bug sprays. While these can kill pests on contact, they are often dangerous to use in kitchens, around pets, or near young children.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-8">Natural DIY Methods</h3>
+            <p className="text-lg text-muted-foreground">
+              Natural methods focus heavily on baiting and repelling. Common fly repellents include essential oils like eucalyptus, lavender, and peppermint. While these won't kill the flies, applying them near windows and doors can deter house flies from entering.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              For active removal, DIY traps using household items like apple cider vinegar, dish soap, or sugar water are highly effective for smaller species. The sweet or fermented scent acts as an irresistible lure, completely eliminating the need for industrial chemicals indoors.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-8">When to Use Commercial Products</h3>
+            <p className="text-lg text-muted-foreground">
+              If your focus is on how to get rid of flies in massive swarms, or if the infestation is outdoors near garbage areas, commercial baits and UV light zappers become necessary. Granular fly baits contain powerful attractants capable of drawing flies away from your home's entrances.
+            </p>
+            <p className="text-lg text-muted-foreground mb-8">
+              Remember, whether you choose a natural approach or a chemical one, no product will permanently get rid of flies if you leave garbage and food out in the open. The absolute best fly removal strategy is impeccable sanitation combined with targeted trapping.
+            </p>
+          </div>
+
+          <div className="text-center mt-12 p-8 bg-muted/30 rounded-2xl border">
+            <h3 className="text-2xl font-bold mb-4">Ready to build your specific strategy?</h3>
+            <p className="text-muted-foreground mb-6 text-lg">Checkout our comprehensive guide on specific traps and bait recipes to start clearing your home today.</p>
+            <Button size="lg" asChild variant="default" className="rounded-full shadow-md hover:-translate-y-1 transition-transform">
+              <Link href="/fruit-fly-trap">Read the Full Trap Guide</Link>
+            </Button>
+          </div>
         </div>
       </section>
 

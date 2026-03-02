@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { UpsellCta } from "@/components/shared/upsell-cta";
 import { Faq } from "@/components/shared/faq";
@@ -8,6 +9,9 @@ import { Card, CardContent } from "@/components/ui/card";
 export const metadata: Metadata = {
     title: "How to Get Rid of House Flies Fast | FlyAway Guide",
     description: "Learn how to get rid of house flies fast, understand why they keep coming back, and keep house flies away naturally.",
+    alternates: {
+        canonical: '/house-flies',
+    },
 };
 
 export default function HouseFliesPage() {
@@ -53,37 +57,115 @@ export default function HouseFliesPage() {
 
             {/* Deep Dive */}
             <section className="w-full py-12">
-                <div className="container md:px-6 mx-auto max-w-4xl space-y-12">
+                <div className="container md:px-6 mx-auto max-w-4xl space-y-16">
 
-                    <div className="space-y-4">
-                        <h2 className="text-3xl font-bold">What Are House Flies?</h2>
+                    <div className="space-y-6">
+                        <h2 className="text-3xl md:text-4xl font-bold">What Are House Flies and Where Do They Come From?</h2>
+                        <div className="grid md:grid-cols-2 gap-8 items-center">
+                            <div className="space-y-4">
+                                <p className="text-muted-foreground text-lg">
+                                    House flies (Musca domestica) are the most common, wide-spread insect pest in the world. They are exactly what they sound like—the common, larger flies (about 1/4 inch long) with gray thoraxes and red eyes that buzz loudly around your home and repeatedly land on your counters.
+                                </p>
+                                <p className="text-muted-foreground text-lg">
+                                    Unlike <Link href="/fruit-flies" className="text-primary hover:underline font-medium">fruit flies</Link> which stick strictly to sugars and fruits, house flies will land on almost anything, from fresh food to garbage to feces, making them prolific disease carriers. If you want to know how to get rid of house flies fast, you have to understand that almost all of them breed <strong>outside</strong> your home first, then fly indoors seeking food.
+                                </p>
+                            </div>
+                            <div className="relative aspect-video rounded-xl overflow-hidden bg-muted flex items-center justify-center border">
+                                <div className="absolute inset-0 bg-primary/5 flex items-center justify-center text-center p-4">
+                                    <span className="text-muted-foreground flex items-center gap-2">
+                                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                                        Common House Fly Close-Up
+                                    </span>
+                                </div>
+                                <Image
+                                    src="/house-fly-view.svg"
+                                    alt="Close up image of a common house fly showing its grey metallic body and large red eyes"
+                                    fill
+                                    className="object-cover opacity-0"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="space-y-6">
+                        <h2 className="text-3xl md:text-4xl font-bold">Why Are There House Flies in My Home?</h2>
                         <p className="text-muted-foreground text-lg">
-                            House flies are exactly what they sound like—the common, larger flies that buzz loudly around your home. They are attracted to decaying organic matter, feces, and unprotected human food. Unlike <Link href="/fruit-flies" className="text-primary hover:underline">fruit flies</Link> which stick to fruit, house flies will land on almost anything.
+                            House flies possess an incredible sense of smell. They can detect food sources from miles away. Common inside attractants include:
                         </p>
+                        <div className="bg-primary/5 p-6 rounded-xl border border-primary/20">
+                            <ul className="list-disc list-inside text-lg text-muted-foreground space-y-3 ml-2">
+                                <li><strong>Trash containing spoiled food:</strong> Any unsealed meat, dairy, or vegetable matter.</li>
+                                <li><strong>Unprotected food:</strong> Crumbs on counters, uncovered fruit bowls, or dirty dishes in the sink.</li>
+                                <li><strong>Pet food:</strong> Dog and cat food left out all day is a massive attractant.</li>
+                                <li><strong>Outdoor sources:</strong> Dog waste left in the yard near windows, or unwashed outdoor garbage bins placed right by the back door.</li>
+                                <li><strong>Easy Access:</strong> Frequently opened doors, torn window screens, and gaps underneath doors.</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div className="space-y-4">
-                        <h2 className="text-3xl font-bold">Why Are There House Flies in My Home?</h2>
-                        <ul className="list-disc list-inside text-lg text-muted-foreground space-y-2 ml-4">
-                            <li>Trash containing spoiled food.</li>
-                            <li>Exposed food or crumbs on counters.</li>
-                            <li>Frequently opened doors or un-screened windows.</li>
-                            <li>Pet food left out all day.</li>
-                            <li>Outdoor attractants (like dog waste) near entrances.</li>
-                        </ul>
+                    <div className="space-y-6">
+                        <h2 className="text-3xl md:text-4xl font-bold">How to Get Rid of House Flies Fast (Indoor Strategies)</h2>
+                        <div className="space-y-8 mt-6">
+
+                            <div>
+                                <h3 className="text-2xl font-bold mb-3">1. Eliminate the Indoor Food Source</h3>
+                                <p className="text-muted-foreground text-lg">
+                                    The quickest way to get rid of house flies inside is to starve them out. Walk through your kitchen and dining areas. Put all food in airtight locking containers or the refrigerator. Wash all dirty dishes immediately, and take out the kitchen trash if it contains food scraps. When there is nothing to eat, they will attempt to find a way back outside.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="text-2xl font-bold mb-3">2. Use Passive Traps</h3>
+                                <p className="text-muted-foreground text-lg">
+                                    Don't use stinky baited fly traps indoors (they smell terrible and attract more flies inside). Instead, use sticky ribbons hung near windows where flies naturally gather to find sunlight. For a cleaner look, use plug-in UV light traps. The flies are drawn to the ultraviolet light at night and get stuck to the hidden glue board behind the light.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="text-2xl font-bold mb-3">3. Natural Repellents</h3>
+                                <p className="text-muted-foreground text-lg">
+                                    House flies hate certain smells. Using essential oil diffusers or sprays containing strong concentrations of peppermint, eucalyptus, lavender, or lemongrass around your entryways can deter them from crossing the threshold.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="space-y-4 bg-primary/5 p-6 rounded-xl border border-primary/20 shadow-sm">
-                        <h2 className="text-2xl font-bold mb-4">How to Keep House Flies Away</h2>
-                        <p className="text-muted-foreground text-lg mb-4">
-                            Prevention is the only permanent cure for house flies.
+                    <div className="space-y-6 border-t pt-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-primary">How to Keep House Flies Away Permanently (Outdoor Strategies)</h2>
+                        <p className="text-muted-foreground text-lg mb-6">
+                            Prevention is the only permanent cure. Since almost all house fly infestations start outdoors, that is where your perimeter defense must begin.
                         </p>
-                        <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                            <li>Check your window screens for holes.</li>
-                            <li>Hose down your outdoor garbage bins monthly.</li>
-                            <li>Avoid leaving dishes in the sink overnight.</li>
-                            <li>Store food in airtight locking containers.</li>
-                        </ul>
+
+                        <div className="grid sm:grid-cols-2 gap-6">
+                            <Card className="shadow-none border-primary/20">
+                                <CardContent className="pt-6">
+                                    <h3 className="font-bold text-xl mb-2">Manage the Garbage Area</h3>
+                                    <p className="text-muted-foreground text-lg">Move outdoor trash cans as far away from doors and windows as possible. Hose out the bins monthly using soap or a specialized bin-cleaning service to remove the fermented sludge at the bottom.</p>
+                                </CardContent>
+                            </Card>
+
+                            <Card className="shadow-none border-primary/20">
+                                <CardContent className="pt-6">
+                                    <h3 className="font-bold text-xl mb-2">Yard Maintenance</h3>
+                                    <p className="text-muted-foreground text-lg">If you have a dog, picking up their waste daily is non-negotiable. Dog feces is the number one breeding ground for house flies in residential areas.</p>
+                                </CardContent>
+                            </Card>
+
+                            <Card className="shadow-none border-primary/20">
+                                <CardContent className="pt-6">
+                                    <h3 className="font-bold text-xl mb-2">Seal the House</h3>
+                                    <p className="text-muted-foreground text-lg">Inspect all window screens. A tiny tear is an open door for a fly. Apply weather stripping to the bottoms and sides of exterior doors.</p>
+                                </CardContent>
+                            </Card>
+
+                            <Card className="shadow-none border-primary/20">
+                                <CardContent className="pt-6">
+                                    <h3 className="font-bold text-xl mb-2">Outdoor Trapping</h3>
+                                    <p className="text-muted-foreground text-lg">Place highly odorous commercial baited fly traps or fly trap bags on the perimeter of your yard (far from the house). These will draw the population away from your living space entirely.</p>
+                                </CardContent>
+                            </Card>
+                        </div>
                     </div>
 
                 </div>

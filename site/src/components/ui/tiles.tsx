@@ -1,7 +1,3 @@
-"use client"
-
-import React from "react"
-import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 interface TilesProps {
@@ -25,8 +21,8 @@ export function Tiles({
     tileClassName,
     tileSize = "md",
 }: TilesProps) {
-    const rowsArray = new Array(rows).fill(1)
-    const colsArray = new Array(cols).fill(1)
+    const rowsArray = Array.from({ length: rows })
+    const colsArray = Array.from({ length: cols })
 
     return (
         <div
@@ -36,7 +32,7 @@ export function Tiles({
             )}
         >
             {rowsArray.map((_, i) => (
-                <motion.div
+                <div
                     key={`row-${i}`}
                     className={cn(
                         tileSizes[tileSize],
@@ -49,25 +45,14 @@ export function Tiles({
                             key={`col-${j}`}
                             className={cn(
                                 tileSizes[tileSize],
-                                "border-r border-t border-primary/20 relative",
+                                "group border-r border-t border-primary/20 relative",
                                 tileClassName
                             )}
                         >
-                            <motion.div
-                                className="absolute inset-0 bg-primary/20"
-                                initial={{ opacity: 0 }}
-                                whileHover={{
-                                    opacity: 1,
-                                    transition: { duration: 0 }
-                                }}
-                                animate={{
-                                    opacity: 0,
-                                    transition: { duration: 2 }
-                                }}
-                            />
+                            <div className="absolute inset-0 bg-primary/20 opacity-0 transition-opacity duration-75 group-hover:opacity-100" />
                         </div>
                     ))}
-                </motion.div>
+                </div>
             ))}
         </div>
     )

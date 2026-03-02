@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Circle } from "lucide-react";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 function ElegantShape({
@@ -20,7 +19,7 @@ function ElegantShape({
     gradient?: string;
 }) {
     return (
-        <motion.div
+        <m.div
             initial={{
                 opacity: 0,
                 y: -150,
@@ -39,7 +38,7 @@ function ElegantShape({
             }}
             className={cn("absolute", className)}
         >
-            <motion.div
+            <m.div
                 animate={{
                     y: [0, 15, 0],
                 }}
@@ -65,8 +64,8 @@ function ElegantShape({
                         "after:bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.02),transparent_70%)]"
                     )}
                 />
-            </motion.div>
-        </motion.div>
+            </m.div>
+        </m.div>
     );
 }
 
@@ -97,114 +96,116 @@ function HeroGeometric({
     };
 
     return (
-        <div className="relative w-full flex items-center justify-center overflow-hidden bg-background py-16 md:py-24 lg:py-32 xl:py-48 mb-12">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-accent/[0.03] blur-3xl" />
+        <LazyMotion features={domAnimation}>
+            <div className="relative w-full flex items-center justify-center overflow-hidden bg-background py-16 md:py-24 lg:py-32 xl:py-48 mb-12">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-accent/[0.03] blur-3xl" />
 
-            <div className="absolute inset-0 overflow-hidden">
-                <ElegantShape
-                    delay={0.3}
-                    width={600}
-                    height={140}
-                    rotate={12}
-                    gradient="from-primary/[0.08]"
-                    className="left-[-10%] md:left-[-5%] top-[15%] md:top-[20%]"
-                />
+                <div className="absolute inset-0 overflow-hidden">
+                    <ElegantShape
+                        delay={0.3}
+                        width={600}
+                        height={140}
+                        rotate={12}
+                        gradient="from-primary/[0.08]"
+                        className="left-[-10%] md:left-[-5%] top-[15%] md:top-[20%]"
+                    />
 
-                <ElegantShape
-                    delay={0.5}
-                    width={500}
-                    height={120}
-                    rotate={-15}
-                    gradient="from-accent/[0.08]"
-                    className="right-[-5%] md:right-[0%] top-[70%] md:top-[75%]"
-                />
+                    <ElegantShape
+                        delay={0.5}
+                        width={500}
+                        height={120}
+                        rotate={-15}
+                        gradient="from-accent/[0.08]"
+                        className="right-[-5%] md:right-[0%] top-[70%] md:top-[75%]"
+                    />
 
-                <ElegantShape
-                    delay={0.4}
-                    width={300}
-                    height={80}
-                    rotate={-8}
-                    gradient="from-primary/[0.05]"
-                    className="left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%]"
-                />
+                    <ElegantShape
+                        delay={0.4}
+                        width={300}
+                        height={80}
+                        rotate={-8}
+                        gradient="from-primary/[0.05]"
+                        className="left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%]"
+                    />
 
-                <ElegantShape
-                    delay={0.6}
-                    width={200}
-                    height={60}
-                    rotate={20}
-                    gradient="from-accent/[0.05]"
-                    className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
-                />
+                    <ElegantShape
+                        delay={0.6}
+                        width={200}
+                        height={60}
+                        rotate={20}
+                        gradient="from-accent/[0.05]"
+                        className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
+                    />
 
-                <ElegantShape
-                    delay={0.7}
-                    width={150}
-                    height={40}
-                    rotate={-25}
-                    gradient="from-secondary/[0.08]"
-                    className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]"
-                />
-            </div>
+                    <ElegantShape
+                        delay={0.7}
+                        width={150}
+                        height={40}
+                        rotate={-25}
+                        gradient="from-secondary/[0.08]"
+                        className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]"
+                    />
+                </div>
 
-            <div className="relative z-10 container mx-auto px-4 md:px-6">
-                <div className="max-w-3xl mx-auto text-center">
-                    <motion.div
-                        custom={0}
-                        variants={fadeUpVariants}
-                        initial="hidden"
-                        animate="visible"
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 mb-6 md:mb-8 shadow-sm"
-                    >
-                        <Circle className="h-2 w-2 fill-accent" />
-                        <span className="text-sm text-foreground/70 tracking-wide font-medium">
-                            {badge}
-                        </span>
-                    </motion.div>
-
-                    <motion.div
-                        custom={1}
-                        variants={fadeUpVariants}
-                        initial="hidden"
-                        animate="visible"
-                    >
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 md:mb-8 tracking-tight text-foreground">
-                            {title1}
-                            <br />
-                            <span
-                                className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/90 to-accent"
-                            >
-                                {title2}
+                <div className="relative z-10 container mx-auto px-4 md:px-6">
+                    <div className="max-w-3xl mx-auto text-center">
+                        <m.div
+                            custom={0}
+                            variants={fadeUpVariants}
+                            initial="hidden"
+                            animate="visible"
+                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 mb-6 md:mb-8 shadow-sm"
+                        >
+                            <span className="h-2 w-2 rounded-full bg-accent" />
+                            <span className="text-sm text-foreground/70 tracking-wide font-medium">
+                                {badge}
                             </span>
-                        </h1>
-                    </motion.div>
+                        </m.div>
 
-                    <motion.div
-                        custom={2}
-                        variants={fadeUpVariants}
-                        initial="hidden"
-                        animate="visible"
-                    >
-                        <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto px-4">
-                            {description}
-                        </p>
-                    </motion.div>
-
-                    {children && (
-                        <motion.div
-                            custom={3}
+                        <m.div
+                            custom={1}
                             variants={fadeUpVariants}
                             initial="hidden"
                             animate="visible"
                         >
-                            {children}
-                        </motion.div>
-                    )}
-                </div>
-            </div>
+                            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 md:mb-8 tracking-tight text-foreground">
+                                {title1}
+                                <br />
+                                <span
+                                    className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/90 to-accent"
+                                >
+                                    {title2}
+                                </span>
+                            </h1>
+                        </m.div>
 
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/10 pointer-events-none" />
-        </div>
+                        <m.div
+                            custom={2}
+                            variants={fadeUpVariants}
+                            initial="hidden"
+                            animate="visible"
+                        >
+                            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto px-4">
+                                {description}
+                            </p>
+                        </m.div>
+
+                        {children && (
+                            <m.div
+                                custom={3}
+                                variants={fadeUpVariants}
+                                initial="hidden"
+                                animate="visible"
+                            >
+                                {children}
+                            </m.div>
+                        )}
+                    </div>
+                </div>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/10 pointer-events-none" />
+            </div>
+        </LazyMotion>
     );
 }
 

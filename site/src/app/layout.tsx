@@ -8,12 +8,13 @@ import { Tiles } from '@/components/ui/tiles';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://howtogetridofflies.top'),
   title: 'FlyAway Guide | How to Get Rid of Flies Fast',
   description: 'Identify the type of flies in your home and remove them fast with our tailored removal guides and AI identifier.',
   openGraph: {
     title: 'FlyAway Guide | How to Get Rid of Flies Fast',
     description: 'Identify the type of flies in your home and remove them fast with our tailored removal guides and AI identifier.',
-    url: 'https://flyawayguide.com', // Placeholder URL
+    url: 'https://howtogetridofflies.top',
     siteName: 'FlyAway Guide',
     locale: 'en_US',
     type: 'website',
@@ -31,8 +32,8 @@ export default function RootLayout({
         <div className="fixed inset-0 z-0 pointer-events-none opacity-80">
           <div className="absolute inset-0 pointer-events-auto">
             <Tiles
-              rows={40}
-              cols={40}
+              rows={24}
+              cols={24}
               tileSize="lg"
             />
           </div>

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { UpsellCta } from "@/components/shared/upsell-cta";
 import { Faq } from "@/components/shared/faq";
@@ -8,6 +9,9 @@ import { Card, CardContent } from "@/components/ui/card";
 export const metadata: Metadata = {
     title: "How to Get Rid of Fruit Flies Fast | FlyAway Guide",
     description: "Learn how to get rid of fruit flies fast, what causes them, which traps work, and how to keep them from coming back.",
+    alternates: {
+        canonical: '/fruit-flies',
+    },
 };
 
 export default function FruitFliesPage() {
@@ -60,41 +64,141 @@ export default function FruitFliesPage() {
 
             {/* Deep Dive Content Outline */}
             <section className="w-full py-12">
-                <div className="container md:px-6 mx-auto max-w-4xl space-y-12">
+                <div className="container md:px-6 mx-auto max-w-4xl space-y-16">
 
-                    <div className="space-y-4">
-                        <h2 className="text-3xl font-bold">What Are Fruit Flies?</h2>
-                        <p className="text-muted-foreground text-lg">
-                            Fruit flies are very small flying insects (about 1/8 inch long) with tan or light brown bodies and usually bright red eyes.
-                            Unlike <Link href="/drain-flies" className="text-primary hover:underline">drain flies</Link> which look fuzzy and sit near sinks, fruit flies actively hover around your kitchen, particularly near fruit bowls, trash bins, or empty bottles.
-                        </p>
-                    </div>
-
-                    <div className="space-y-4">
-                        <h2 className="text-3xl font-bold">Why Do I Have Fruit Flies?</h2>
-                        <p className="text-muted-foreground text-lg">
-                            Fruit flies are attracted to fermenting sugars. Common attractants include:
-                        </p>
-                        <ul className="list-disc list-inside text-lg text-muted-foreground space-y-2 ml-4">
-                            <li>Overripe or rotting fruit left on the counter.</li>
-                            <li>Unsealed trash bins and recycling bins.</li>
-                            <li>Sticky spills under the fridge or on counters.</li>
-                            <li>Residue left in empty alcohol or soda bottles.</li>
-                        </ul>
-                    </div>
-
-                    <div className="space-y-4">
-                        <h2 className="text-3xl font-bold">DIY and Natural Methods</h2>
-                        <p className="text-muted-foreground text-lg mb-4">
-                            You don't always need harsh chemicals. Try this highly effective natural trap:
-                        </p>
-                        <div className="bg-primary/5 p-6 rounded-xl border border-primary/20 shadow-sm">
-                            <h3 className="text-xl font-bold mb-2">The Apple Cider Vinegar Trap</h3>
-                            <p className="mb-4 text-muted-foreground">Pour a half inch of apple cider vinegar into a small bowl or jar. Add a single drop of liquid dish soap and mix gently. Place it near the fruit fly activity.</p>
-                            <Button asChild variant="secondary" className="rounded-full">
-                                <Link href="/fruit-fly-trap">Want more trap options?</Link>
-                            </Button>
+                    <div className="space-y-6">
+                        <h2 className="text-3xl md:text-4xl font-bold">What Are Fruit Flies and Why Are They Here?</h2>
+                        <div className="grid md:grid-cols-2 gap-8 items-center">
+                            <div className="space-y-4">
+                                <p className="text-muted-foreground text-lg">
+                                    Before you can determine how to get rid of fruit flies, you must understand their biology. Fruit flies (Drosophila melanogaster) are very small flying insects—usually about 1/8 inch long—with tan or light brown bodies and bright red eyes.
+                                </p>
+                                <p className="text-muted-foreground text-lg">
+                                    Unlike <Link href="/drain-flies" className="text-primary hover:underline font-medium">drain flies</Link>, which look fuzzy and sit sluggishly near sinks, fruit flies actively hover around your kitchen, particularly near fruit bowls, trash bins, or empty bottles. They have a phenomenal sense of smell.
+                                </p>
+                            </div>
+                            <div className="relative aspect-video rounded-xl overflow-hidden bg-muted flex items-center justify-center border">
+                                {/* Visual Placeholder for SEO */}
+                                <div className="absolute inset-0 bg-primary/5 flex items-center justify-center">
+                                    <span className="text-muted-foreground flex items-center gap-2">
+                                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                                        Fruit Fly Close-Up View
+                                    </span>
+                                </div>
+                                <Image
+                                    src="/fruit-fly-identification.svg"
+                                    alt="Detailed close up of a fruit fly to help identify them in your kitchen"
+                                    fill
+                                    className="object-cover opacity-0"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                />
+                            </div>
                         </div>
+                    </div>
+
+                    <div className="space-y-6">
+                        <h2 className="text-3xl md:text-4xl font-bold">The Main Causes: What Attracts Fruit Flies?</h2>
+                        <p className="text-muted-foreground text-lg">
+                            Fruit flies are exclusively attracted to fermenting sugars and yeast. If you are researching how to get rid of fruit flies, your first step must be eliminating these attractants. Common sources include:
+                        </p>
+                        <div className="grid sm:grid-cols-2 gap-4 mt-6">
+                            <Card className="shadow-none border-primary/20 bg-card">
+                                <CardContent className="pt-6">
+                                    <h3 className="font-bold text-xl mb-2">Unsealed Trash</h3>
+                                    <p className="text-muted-foreground">Kitchen bins lacking a tight lid, especially if they contain food scraps.</p>
+                                </CardContent>
+                            </Card>
+                            <Card className="shadow-none border-primary/20 bg-card">
+                                <CardContent className="pt-6">
+                                    <h3 className="font-bold text-xl mb-2">Overripe Produce</h3>
+                                    <p className="text-muted-foreground">Bananas, tomatoes, and apples left on the counter too long.</p>
+                                </CardContent>
+                            </Card>
+                            <Card className="shadow-none border-primary/20 bg-card">
+                                <CardContent className="pt-6">
+                                    <h3 className="font-bold text-xl mb-2">Sticky Spills</h3>
+                                    <p className="text-muted-foreground">Dried juice or wine underneath appliances or inside the pantry.</p>
+                                </CardContent>
+                            </Card>
+                            <Card className="shadow-none border-primary/20 bg-card">
+                                <CardContent className="pt-6">
+                                    <h3 className="font-bold text-xl mb-2">Empty Bottles</h3>
+                                    <p className="text-muted-foreground">Unrinsed beer, wine, or soda bottles left in the recycling bin.</p>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    </div>
+
+                    <div className="space-y-6">
+                        <h2 className="text-3xl md:text-4xl font-bold">Step-by-Step: How to Get Rid of Fruit Flies Fast</h2>
+                        <div className="space-y-8">
+                            <div>
+                                <h3 className="text-2xl font-bold mb-3 flex items-center"><span className="text-primary mr-2">Step 1:</span> Destroy the Breeding Ground</h3>
+                                <p className="text-muted-foreground text-lg">
+                                    You cannot get rid of fruit flies without finding where they are laying their eggs. A female fruit fly can lay up to 500 eggs in decaying organic matter. Inspect every inch of your kitchen. Throw away aging produce. Take the trash out immediately. Wash your unsealed recycling bins with hot, soapy water.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="text-2xl font-bold mb-3 flex items-center"><span className="text-primary mr-2">Step 2:</span> Deep Clean Hidden Surfaces</h3>
+                                <p className="text-muted-foreground text-lg">
+                                    Fruit flies only need a microscopic smear of fermenting liquid to survive. Pull out your refrigerator and stove to clean the sides and the floor beneath them. Wipe down your countertops with a mixture of hot water and vinegar to cut through hidden sugary residues. Focus heavily on the area surrounding your sink and trash can.
+                                </p>
+                            </div>
+
+                            <div className="bg-primary/5 p-8 rounded-2xl border border-primary/20">
+                                <h3 className="text-2xl font-bold mb-4 flex items-center"><span className="text-primary mr-2">Step 3:</span> Deploy the Ultimate DIY Fruit Fly Trap</h3>
+                                <div className="grid md:grid-cols-2 gap-8 items-center">
+                                    <div>
+                                        <p className="mb-4 text-muted-foreground text-lg">
+                                            Once the food source is gone, you need to catch the starving adults. You don't need toxic bug spray. The absolute best way to catch them is with an Apple Cider Vinegar trap.
+                                        </p>
+                                        <ul className="list-disc list-inside space-y-2 text-muted-foreground font-medium mb-6">
+                                            <li>Pour 1/2 inch of apple cider vinegar into a bowl.</li>
+                                            <li>Add one small drop of liquid dish soap.</li>
+                                            <li>Mix very gently (do not create bubbles).</li>
+                                            <li>Place near the sink or where flies gather.</li>
+                                        </ul>
+                                        <Button asChild variant="default" className="rounded-full">
+                                            <Link href="/fruit-fly-trap">See More Trap Recipes</Link>
+                                        </Button>
+                                    </div>
+                                    <div className="relative aspect-square rounded-xl overflow-hidden bg-background border flex items-center justify-center">
+                                        <div className="absolute inset-0 flex items-center justify-center text-muted-foreground text-sm p-4 text-center">
+                                            [Image: Apple Cider Vinegar Trap Setup]
+                                        </div>
+                                        <Image
+                                            src="/vinegar-trap.svg"
+                                            alt="A DIY apple cider vinegar fruit fly trap actively catching flies in a kitchen"
+                                            fill
+                                            className="object-cover opacity-0"
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="space-y-6 border-t pt-12">
+                        <h2 className="text-3xl font-bold">Long-Term Prevention Tips</h2>
+                        <p className="text-muted-foreground text-lg">
+                            Knowing how to get rid of fruit flies permanently means changing a few minor habits in your kitchen:
+                        </p>
+                        <ul className="space-y-4 text-lg text-muted-foreground list-none ml-0">
+                            <li className="flex gap-3">
+                                <span className="text-primary text-xl">✓</span>
+                                <div><strong>Wash Produce Immediately:</strong> Fruit flies often enter your home as microscopic eggs laid on the skin of bananas and melons at the grocery store. Wash your fruit as soon as you bring it home.</div>
+                            </li>
+                            <li className="flex gap-3">
+                                <span className="text-primary text-xl">✓</span>
+                                <div><strong>Rinse Recyclables:</strong> Never put a sticky soda can or wine bottle into an open indoor recycling bin. Rinse them out first.</div>
+                            </li>
+                            <li className="flex gap-3">
+                                <span className="text-primary text-xl">✓</span>
+                                <div><strong>Use Lidded Bins:</strong> Replace open wastebaskets in the kitchen with step-cans that seal tightly.</div>
+                            </li>
+                        </ul>
                     </div>
 
                 </div>

@@ -6,6 +6,9 @@ import Link from "next/link";
 export const metadata: Metadata = {
     title: "Your Custom Fly Removal Plan | FlyAway Guide",
     description: "Get a customized, step-by-step action plan to remove flies from your home based on your unique situation and preferences.",
+    alternates: {
+        canonical: '/personalized-plan',
+    },
 };
 
 export default function PersonalizedPlanPage() {
