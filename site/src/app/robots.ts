@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/personalized-plan/result/'],
         },
-        sitemap: 'https://flyawayguide.com/sitemap.xml',
+        sitemap: 'https://howtogetridofflies.top/sitemap.xml',
     };
 }
