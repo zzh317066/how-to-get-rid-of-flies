@@ -21,7 +21,7 @@ export function UpsellCta({
                 {description}
             </p>
             <Button asChild size="lg" className="w-full sm:w-auto font-semibold bg-accent text-accent-foreground hover:bg-accent/90 rounded-full shadow-md transition-all ease-in-out hover:-translate-y-1">
-                <Link href="/personalized-plan">{buttonText}</Link>
+                <Link prefetch={false} href="/personalized-plan">{buttonText}</Link>
             </Button>
         </div>
     );

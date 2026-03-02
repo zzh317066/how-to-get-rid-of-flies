@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { UpsellCta } from "@/components/shared/upsell-cta";
 import { Faq } from "@/components/shared/faq";
@@ -63,48 +62,31 @@ export default function TrapPage() {
                             <span className="bg-primary text-primary-foreground w-10 h-10 rounded-full flex items-center justify-center text-xl">1</span>
                             The Ultimate DIY Fruit Fly Trap (The Classic Method)
                         </h2>
-                        <div className="grid md:grid-cols-2 gap-8 items-center mt-6">
-                            <div className="space-y-4">
-                                <p className="text-muted-foreground text-lg">
-                                    You don't need to spend money on commercial chemicals to build a highly effective fruit fly trap. You likely already have the ingredients in your pantry.
-                                </p>
-                                <div className="bg-background border border-border p-6 rounded-xl shadow-sm">
-                                    <h3 className="font-bold text-xl mb-3">You Will Need:</h3>
-                                    <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                                        <li>A small bowl or jar</li>
-                                        <li>Apple cider vinegar (do not substitute white vinegar)</li>
-                                        <li>Liquid dish soap (Dawn works best)</li>
-                                        <li>Plastic wrap and a rubber band (optional)</li>
-                                    </ul>
-                                </div>
-                                <div className="space-y-2">
-                                    <h3 className="font-bold text-xl">Instructions:</h3>
-                                    <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-                                        <li>Pour about 1/2 inch of apple cider vinegar into the bowl.</li>
-                                        <li>Add a single drop of liquid dish soap.</li>
-                                        <li>Mix very gently so bubbles do not form on the surface.</li>
-                                        <li>Place the trap next to the fruit bowl or sink.</li>
-                                        <li><span className="italic">Optional:</span> Cover tightly with plastic wrap, secure with a rubber band, and poke tiny holes in the top with a toothpick.</li>
-                                    </ol>
-                                    <p className="text-sm border-l-4 border-primary pl-4 mt-4 italic text-muted-foreground">
-                                        <strong>The Science:</strong> The sweet smell of the vinegar mimics rotting fruit, luring them in. The drop of dish soap breaks the surface tension of the liquid, so when the flies land, they immediately sink and drown instead of walking on the surface.
-                                    </p>
-                                </div>
+                        <div className="space-y-4 max-w-3xl mt-6">
+                            <p className="text-muted-foreground text-lg">
+                                You don't need to spend money on commercial chemicals to build a highly effective fruit fly trap. You likely already have the ingredients in your pantry.
+                            </p>
+                            <div className="bg-background border border-border p-6 rounded-xl shadow-sm">
+                                <h3 className="font-bold text-xl mb-3">You Will Need:</h3>
+                                <ul className="list-disc list-inside space-y-2 text-muted-foreground flex flex-col gap-1">
+                                    <li>A small bowl or jar</li>
+                                    <li>Apple cider vinegar (do not substitute white vinegar)</li>
+                                    <li>Liquid dish soap (Dawn works best)</li>
+                                    <li>Plastic wrap and a rubber band (optional)</li>
+                                </ul>
                             </div>
-                            <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-background border flex flex-col items-center justify-center p-6 shadow-sm">
-                                <div className="absolute inset-0 bg-primary/5 flex items-center justify-center text-center p-4">
-                                    <span className="text-muted-foreground flex flex-col items-center gap-4">
-                                        <svg className="w-12 h-12 text-primary/50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
-                                        DIY Vinegar Trap Diagram
-                                    </span>
-                                </div>
-                                <Image
-                                    src="/diy-trap-diagram.svg"
-                                    alt="Diagram showing how to build an apple cider vinegar fruit fly trap with plastic wrap"
-                                    fill
-                                    className="object-cover opacity-0"
-                                    sizes="(max-width: 768px) 100vw, 33vw"
-                                />
+                            <div className="space-y-4 pt-4">
+                                <h3 className="font-bold text-xl">Instructions:</h3>
+                                <ol className="list-decimal list-inside space-y-2 text-muted-foreground flex flex-col gap-1">
+                                    <li>Pour about 1/2 inch of apple cider vinegar into the bowl.</li>
+                                    <li>Add a single drop of liquid dish soap.</li>
+                                    <li>Mix very gently so bubbles do not form on the surface.</li>
+                                    <li>Place the trap next to the fruit bowl or sink.</li>
+                                    <li><span className="italic">Optional:</span> Cover tightly with plastic wrap, secure with a rubber band, and poke tiny holes in the top with a toothpick.</li>
+                                </ol>
+                                <p className="text-base border-l-4 border-primary pl-4 mt-6 italic text-muted-foreground bg-primary/5 p-4 rounded-r-lg">
+                                    <strong>The Science:</strong> The sweet smell of the vinegar mimics rotting fruit, luring them in. The drop of dish soap breaks the surface tension of the liquid, so when the flies land, they immediately sink and drown instead of walking on the surface.
+                                </p>
                             </div>
                         </div>
                     </div>

@@ -11,24 +11,28 @@ export function Header() {
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-4 lg:space-x-6">
             <Link
+              prefetch={false}
               href="/fruit-flies"
               className="text-sm font-medium transition-colors hover:text-foreground/80 text-foreground/60"
             >
               Fruit Flies
             </Link>
             <Link
+              prefetch={false}
               href="/drain-flies"
               className="text-sm font-medium transition-colors hover:text-foreground/80 text-foreground/60"
             >
               Drain Flies
             </Link>
             <Link
+              prefetch={false}
               href="/house-flies"
               className="text-sm font-medium transition-colors hover:text-foreground/80 text-foreground/60"
             >
               House Flies
             </Link>
             <Link
+              prefetch={false}
               href="/fruit-fly-trap"
               className="text-sm font-medium transition-colors hover:text-foreground/80 text-foreground/60"
             >

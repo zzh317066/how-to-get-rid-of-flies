@@ -137,7 +137,7 @@ export default function Home() {
                 <CardDescription>Very small, often found near fruit, trash, or sticky kitchen counters.</CardDescription>
               </CardHeader>
               <CardFooter>
-                <Button asChild variant="outline" className="w-full rounded-full"><Link href="/fruit-flies">See Fruit Fly Guide</Link></Button>
+                <Button asChild variant="outline" className="w-full rounded-full"><Link prefetch={false} href="/fruit-flies">See Fruit Fly Guide</Link></Button>
               </CardFooter>
             </Card>
             <Card className="transition-all hover:-translate-y-1 hover:shadow-md">
@@ -146,7 +146,7 @@ export default function Home() {
                 <CardDescription>Fuzzy and dark, typically appearing near sinks, drains, or moist bathrooms.</CardDescription>
               </CardHeader>
               <CardFooter>
-                <Button asChild variant="outline" className="w-full rounded-full"><Link href="/drain-flies">See Drain Fly Guide</Link></Button>
+                <Button asChild variant="outline" className="w-full rounded-full"><Link prefetch={false} href="/drain-flies">See Drain Fly Guide</Link></Button>
               </CardFooter>
             </Card>
             <Card className="transition-all hover:-translate-y-1 hover:shadow-md">
@@ -155,7 +155,7 @@ export default function Home() {
                 <CardDescription>Common, much larger flies flying around trash, open food, and windows.</CardDescription>
               </CardHeader>
               <CardFooter>
-                <Button asChild variant="outline" className="w-full rounded-full"><Link href="/house-flies">See House Fly Guide</Link></Button>
+                <Button asChild variant="outline" className="w-full rounded-full"><Link prefetch={false} href="/house-flies">See House Fly Guide</Link></Button>
               </CardFooter>
             </Card>
           </div>
@@ -203,7 +203,7 @@ export default function Home() {
             <h3 className="text-2xl font-bold mb-4">Ready to build your specific strategy?</h3>
             <p className="text-muted-foreground mb-6 text-lg">Checkout our comprehensive guide on specific traps and bait recipes to start clearing your home today.</p>
             <Button size="lg" asChild variant="default" className="rounded-full shadow-md hover:-translate-y-1 transition-transform">
-              <Link href="/fruit-fly-trap">Read the Full Trap Guide</Link>
+              <Link prefetch={false} href="/fruit-fly-trap">Read the Full Trap Guide</Link>
             </Button>
           </div>
         </div>

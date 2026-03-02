@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { UpsellCta } from "@/components/shared/upsell-cta";
 import { Faq } from "@/components/shared/faq";
@@ -68,31 +67,13 @@ export default function FruitFliesPage() {
 
                     <div className="space-y-6">
                         <h2 className="text-3xl md:text-4xl font-bold">What Are Fruit Flies and Why Are They Here?</h2>
-                        <div className="grid md:grid-cols-2 gap-8 items-center">
-                            <div className="space-y-4">
-                                <p className="text-muted-foreground text-lg">
-                                    Before you can determine how to get rid of fruit flies, you must understand their biology. Fruit flies (Drosophila melanogaster) are very small flying insects—usually about 1/8 inch long—with tan or light brown bodies and bright red eyes.
-                                </p>
-                                <p className="text-muted-foreground text-lg">
-                                    Unlike <Link href="/drain-flies" className="text-primary hover:underline font-medium">drain flies</Link>, which look fuzzy and sit sluggishly near sinks, fruit flies actively hover around your kitchen, particularly near fruit bowls, trash bins, or empty bottles. They have a phenomenal sense of smell.
-                                </p>
-                            </div>
-                            <div className="relative aspect-video rounded-xl overflow-hidden bg-muted flex items-center justify-center border">
-                                {/* Visual Placeholder for SEO */}
-                                <div className="absolute inset-0 bg-primary/5 flex items-center justify-center">
-                                    <span className="text-muted-foreground flex items-center gap-2">
-                                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                                        Fruit Fly Close-Up View
-                                    </span>
-                                </div>
-                                <Image
-                                    src="/fruit-fly-identification.svg"
-                                    alt="Detailed close up of a fruit fly to help identify them in your kitchen"
-                                    fill
-                                    className="object-cover opacity-0"
-                                    sizes="(max-width: 768px) 100vw, 50vw"
-                                />
-                            </div>
+                        <div className="space-y-4 max-w-3xl">
+                            <p className="text-muted-foreground text-lg">
+                                Before you can determine how to get rid of fruit flies, you must understand their biology. Fruit flies (Drosophila melanogaster) are very small flying insects—usually about 1/8 inch long—with tan or light brown bodies and bright red eyes.
+                            </p>
+                            <p className="text-muted-foreground text-lg">
+                                Unlike <Link href="/drain-flies" className="text-primary hover:underline font-medium">drain flies</Link>, which look fuzzy and sit sluggishly near sinks, fruit flies actively hover around your kitchen, particularly near fruit bowls, trash bins, or empty bottles. They have a phenomenal sense of smell.
+                            </p>
                         </div>
                     </div>
 
@@ -148,33 +129,19 @@ export default function FruitFliesPage() {
 
                             <div className="bg-primary/5 p-8 rounded-2xl border border-primary/20">
                                 <h3 className="text-2xl font-bold mb-4 flex items-center"><span className="text-primary mr-2">Step 3:</span> Deploy the Ultimate DIY Fruit Fly Trap</h3>
-                                <div className="grid md:grid-cols-2 gap-8 items-center">
-                                    <div>
-                                        <p className="mb-4 text-muted-foreground text-lg">
-                                            Once the food source is gone, you need to catch the starving adults. You don't need toxic bug spray. The absolute best way to catch them is with an Apple Cider Vinegar trap.
-                                        </p>
-                                        <ul className="list-disc list-inside space-y-2 text-muted-foreground font-medium mb-6">
-                                            <li>Pour 1/2 inch of apple cider vinegar into a bowl.</li>
-                                            <li>Add one small drop of liquid dish soap.</li>
-                                            <li>Mix very gently (do not create bubbles).</li>
-                                            <li>Place near the sink or where flies gather.</li>
-                                        </ul>
-                                        <Button asChild variant="default" className="rounded-full">
-                                            <Link href="/fruit-fly-trap">See More Trap Recipes</Link>
-                                        </Button>
-                                    </div>
-                                    <div className="relative aspect-square rounded-xl overflow-hidden bg-background border flex items-center justify-center">
-                                        <div className="absolute inset-0 flex items-center justify-center text-muted-foreground text-sm p-4 text-center">
-                                            [Image: Apple Cider Vinegar Trap Setup]
-                                        </div>
-                                        <Image
-                                            src="/vinegar-trap.svg"
-                                            alt="A DIY apple cider vinegar fruit fly trap actively catching flies in a kitchen"
-                                            fill
-                                            className="object-cover opacity-0"
-                                            sizes="(max-width: 768px) 100vw, 33vw"
-                                        />
-                                    </div>
+                                <div className="space-y-4">
+                                    <p className="mb-4 text-muted-foreground text-lg">
+                                        Once the food source is gone, you need to catch the starving adults. You don't need toxic bug spray. The absolute best way to catch them is with an Apple Cider Vinegar trap.
+                                    </p>
+                                    <ul className="list-disc list-inside space-y-2 text-muted-foreground font-medium mb-6 text-lg">
+                                        <li>Pour 1/2 inch of apple cider vinegar into a bowl.</li>
+                                        <li>Add one small drop of liquid dish soap.</li>
+                                        <li>Mix very gently (do not create bubbles).</li>
+                                        <li>Place near the sink or where flies gather.</li>
+                                    </ul>
+                                    <Button asChild variant="default" className="rounded-full">
+                                        <Link href="/fruit-fly-trap">See More Trap Recipes</Link>
+                                    </Button>
                                 </div>
                             </div>
                         </div>
