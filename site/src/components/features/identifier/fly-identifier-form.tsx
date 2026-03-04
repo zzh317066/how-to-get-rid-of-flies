@@ -50,8 +50,8 @@ export function FlyIdentifierForm() {
                     <Button asChild className="w-full rounded-full shadow-sm" onClick={() => trackEvent("fly_identifier_clicked_recommended")}>
                         <a href={result.recommendedPageSlug}>Read the Full Guide</a>
                     </Button>
-                    <Button variant="outline" asChild className="w-full rounded-full" onClick={() => trackEvent("fly_identifier_clicked_upsell")}>
-                        <a href="/personalized-plan">Get a Personalized Plan</a>
+                    <Button asChild className="w-full rounded-full bg-primary/10 text-primary hover:bg-primary/20" variant="secondary" onClick={() => trackEvent("fly_identifier_clicked_upsell")}>
+                        <a href="/personalized-plan">Get Custom Plan ($5)</a>
                     </Button>
                 </div>
             </div>

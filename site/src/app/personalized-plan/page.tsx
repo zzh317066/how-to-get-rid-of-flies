@@ -3,8 +3,9 @@ import { PersonalizedPlanForm } from "@/components/features/identifier/personali
 import { Faq } from "@/components/shared/faq";
 import Link from "next/link";
 import { cookies } from "next/headers";
-import { Lock, ShieldCheck } from "lucide-react";
+import { CheckCircle2, Lock, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
     title: "Your Custom Fly Removal Plan | FlyAway Guide",
@@ -44,24 +45,57 @@ export default async function PersonalizedPlanPage() {
                     {hasPaid ? (
                         <PersonalizedPlanForm />
                     ) : (
-                        <div className="max-w-xl mx-auto bg-card border rounded-2xl p-8 text-center space-y-6 shadow-sm">
-                            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto text-primary mb-4">
-                                <Lock className="w-8 h-8" />
-                            </div>
-                            <h2 className="text-2xl font-bold">Plan Generator Locked</h2>
-                            <p className="text-muted-foreground text-lg">
-                                Access to the AI-Powered Personalized Fly Removal Plan requires a one-time payment of $5.
-                            </p>
-                            <div className="pt-4 space-y-4">
-                                <Button asChild size="lg" className="w-full text-lg rounded-full">
-                                    <a href={process.env.NEXT_PUBLIC_CREEM_PRODUCT_LINK}>
-                                        Unlock the Generator
-                                    </a>
-                                </Button>
-                                <p className="text-xs text-muted-foreground flex items-center justify-center gap-1">
-                                    <ShieldCheck className="w-4 h-4" /> Secure checkout powered by Creem.io
+                        <div className="max-w-2xl mx-auto space-y-8 animate-in fade-in duration-500">
+                            {/* Value Proposition */}
+                            <div className="text-center space-y-4 mb-8">
+                                <h2 className="text-3xl font-bold tracking-tight">Unlock Your Custom Strategy</h2>
+                                <p className="text-lg text-muted-foreground">
+                                    Our AI analyzes your exact fly type, infestation severity, and constraints (like pets or kids) to build a safe, guaranteed removal protocol.
                                 </p>
                             </div>
+
+                            <Card className="w-full border-primary/50 shadow-xl relative overflow-hidden">
+                                <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-bl-lg flex items-center gap-1">
+                                    <Lock className="w-3 h-3" /> SECURE CHECKOUT
+                                </div>
+                                <CardHeader className="text-center pt-10">
+                                    <CardTitle className="text-2xl">AI Personalized Plan</CardTitle>
+                                    <div className="mt-4 flex items-baseline justify-center gap-x-2">
+                                        <span className="text-5xl font-bold tracking-tight">$5</span>
+                                        <span className="text-muted-foreground">one-time payment</span>
+                                    </div>
+                                    <CardDescription className="pt-4 max-w-sm mx-auto">
+                                        No subscription. Just instant access to expert-level pest control tailored for you.
+                                    </CardDescription>
+                                </CardHeader>
+                                <CardContent className="space-y-4 pt-4 md:px-12">
+                                    <ul className="grid sm:grid-cols-2 gap-4">
+                                        {[
+                                            "Custom 24-hour rapid response plan",
+                                            "3-day complete clearance strategy",
+                                            "Safe for your specific situation (pets/kids)",
+                                            "Exact shopping list of supplies needed",
+                                            "Long-term 7-day prevention guide",
+                                            "Instant digital delivery",
+                                        ].map((feature, i) => (
+                                            <li key={i} className="flex gap-x-3 text-sm items-start">
+                                                <CheckCircle2 className="h-5 w-5 flex-none text-primary" />
+                                                <span>{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </CardContent>
+                                <CardFooter className="pb-8 pt-6 flex-col space-y-4">
+                                    <Button asChild size="lg" className="w-full max-w-sm text-lg rounded-full shadow-md transition-transform hover:-translate-y-1">
+                                        <a href={process.env.NEXT_PUBLIC_CREEM_PRODUCT_LINK || "https://www.creem.io/test/payment/prod_RpM6A9pJMGWKllhZF3wUS"}>
+                                            Unlock the Generator Now
+                                        </a>
+                                    </Button>
+                                    <p className="text-xs text-muted-foreground flex items-center justify-center gap-1">
+                                        <ShieldCheck className="w-4 h-4" /> Payments safely processed by Creem.io
+                                    </p>
+                                </CardFooter>
+                            </Card>
                         </div>
                     )}
                 </div>

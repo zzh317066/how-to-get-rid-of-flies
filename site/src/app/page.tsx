@@ -257,7 +257,7 @@ export default function Home() {
               </CardContent>
               <CardFooter className="pb-8 pt-4">
                 <Button asChild size="lg" className="w-full text-lg rounded-full shadow-md hover:-translate-y-1 transition-transform">
-                  <a href={process.env.NEXT_PUBLIC_CREEM_PRODUCT_LINK}>
+                  <a href={process.env.NEXT_PUBLIC_CREEM_PRODUCT_LINK || "https://www.creem.io/test/payment/prod_RpM6A9pJMGWKllhZF3wUS"}>
                     Get Your Plan Now
                   </a>
                 </Button>

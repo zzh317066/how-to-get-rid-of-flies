@@ -39,9 +39,16 @@ export function Header() {
               Traps
             </Link>
           </nav>
-          <Button asChild variant="secondary" className="hidden sm:inline-flex">
-             <Link href="#fly-identifier">Try Identifier</Link>
-          </Button>
+          <div className="hidden sm:flex items-center space-x-2">
+            <Button asChild variant="secondary" className="font-semibold text-primary bg-primary/10 hover:bg-primary/20">
+              <a href={process.env.NEXT_PUBLIC_CREEM_PRODUCT_LINK || "https://www.creem.io/test/payment/prod_RpM6A9pJMGWKllhZF3wUS"}>
+                Get Custom Plan ($5)
+              </a>
+            </Button>
+            <Button asChild variant="outline">
+              <Link href="/#fly-identifier">Identifier</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </header>
