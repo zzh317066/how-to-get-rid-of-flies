@@ -5,7 +5,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { UpsellCta } from "@/components/shared/upsell-cta";
 import { Faq } from "@/components/shared/faq";
-import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardDescription, CardFooter, CardContent } from "@/components/ui/card";
+import { CheckCircle2 } from "lucide-react";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 
 const FlyIdentifierForm = dynamic(
@@ -212,7 +213,61 @@ export default function Home() {
       {/* 6. Upsell CTA */}
       <UpsellCta className="border border-primary/20 bg-primary/5" />
 
-      {/* 7. FAQ */}
+      {/* 7. Pricing Table */}
+      <section id="pricing" className="py-24 bg-muted/30">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Simple, Transparent Pricing</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Get immediate access to the AI-Powered Personalized Fly Removal Plan and reclaim your home today.
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <Card className="w-full max-w-md border-primary/50 shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-bl-lg">
+                POPULAR
+              </div>
+              <CardHeader className="text-center pt-8">
+                <CardTitle className="text-2xl">AI Personalized Plan</CardTitle>
+                <div className="mt-4 flex items-baseline justify-center gap-x-2">
+                  <span className="text-5xl font-bold tracking-tight">$5</span>
+                  <span className="text-muted-foreground">one-time</span>
+                </div>
+                <CardDescription className="pt-4">
+                  Everything you need to eliminate your specific fly infestation fast.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4 pt-4">
+                <ul className="space-y-3">
+                  {[
+                    "Custom 24-hour rapid response plan",
+                    "3-day complete clearance strategy",
+                    "Safe for your specific situation (pets/kids)",
+                    "Exact shopping list of supplies needed",
+                    "Long-term 7-day prevention guide",
+                    "Instant digital delivery",
+                  ].map((feature, i) => (
+                    <li key={i} className="flex gap-x-3 text-sm">
+                      <CheckCircle2 className="h-5 w-5 flex-none text-primary" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter className="pb-8 pt-4">
+                <Button asChild size="lg" className="w-full text-lg rounded-full shadow-md hover:-translate-y-1 transition-transform">
+                  <a href={process.env.NEXT_PUBLIC_CREEM_PRODUCT_LINK}>
+                    Get Your Plan Now
+                  </a>
+                </Button>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. FAQ */}
       <Faq items={faqs} />
     </div>
   );

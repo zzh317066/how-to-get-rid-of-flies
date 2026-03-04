@@ -1,5 +1,7 @@
 "use server";
 
+import { cookies } from "next/headers";
+
 import { createOpenAI } from "@ai-sdk/openai";
 import { generateObject } from "ai";
 import { z } from "zod";
@@ -18,6 +20,13 @@ export async function generatePlan(formData: {
     extraNotes: string;
 }) {
     try {
+        const cookieStore = await cookies();
+        const hasPaid = cookieStore.get("has_paid")?.value === "true";
+
+        if (!hasPaid) {
+            return { success: false, error: "PAYMENT_REQUIRED", message: "A valid payment is required to generate a personalized AI plan." };
+        }
+
         const { object } = await generateObject({
             model: evolink("gpt-5.1"),
             schema: z.object({
