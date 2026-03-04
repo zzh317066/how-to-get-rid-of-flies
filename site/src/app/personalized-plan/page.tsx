@@ -91,9 +91,14 @@ export default async function PersonalizedPlanPage() {
                                             Unlock the Generator Now
                                         </a>
                                     </Button>
-                                    <p className="text-xs text-muted-foreground flex items-center justify-center gap-1">
-                                        <ShieldCheck className="w-4 h-4" /> Payments safely processed by Creem.io
-                                    </p>
+                                    <div className="text-center space-y-2 text-muted-foreground w-full max-w-sm">
+                                        <p className="text-xs flex items-center justify-center gap-1">
+                                            <ShieldCheck className="w-4 h-4" /> Payments safely processed by Creem.io
+                                        </p>
+                                        <p className="text-[10px] leading-tight px-4 opacity-75">
+                                            FlyAway Guide is an independent service. The personalized plan is generated in real-time by advanced AI models (GPT-5.1) based on your specific situation.
+                                        </p>
+                                    </div>
                                 </CardFooter>
                             </Card>
                         </div>

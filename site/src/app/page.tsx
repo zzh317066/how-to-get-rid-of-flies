@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { UpsellCta } from "@/components/shared/upsell-cta";
 import { Faq } from "@/components/shared/faq";
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter, CardContent } from "@/components/ui/card";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Shield } from "lucide-react";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 
 const FlyIdentifierForm = dynamic(
@@ -255,12 +255,20 @@ export default function Home() {
                   ))}
                 </ul>
               </CardContent>
-              <CardFooter className="pb-8 pt-4">
+              <CardFooter className="pb-8 pt-4 flex-col space-y-4">
                 <Button asChild size="lg" className="w-full text-lg rounded-full shadow-md hover:-translate-y-1 transition-transform">
                   <a href={process.env.NEXT_PUBLIC_CREEM_PRODUCT_LINK || "https://www.creem.io/test/payment/prod_RpM6A9pJMGWKllhZF3wUS"}>
                     Get Your Plan Now
                   </a>
                 </Button>
+                <div className="text-center space-y-2 text-muted-foreground w-full">
+                  <p className="text-xs flex items-center justify-center gap-1">
+                    <Shield className="w-4 h-4" /> Secure checkout by Creem.io
+                  </p>
+                  <p className="text-[10px] leading-tight px-4 opacity-75">
+                    FlyAway Guide is an independent service. The personalized plan is generated in real-time by advanced AI models (GPT-5.1) based on your specific situation.
+                  </p>
+                </div>
               </CardFooter>
             </Card>
           </div>
