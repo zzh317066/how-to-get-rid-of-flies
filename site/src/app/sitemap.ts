@@ -94,5 +94,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'yearly',
             priority: 0.3,
         },
+        ...[
+            "how-to-get-rid-of-fruit-flies",
+            "how-to-get-rid-of-drain-flies",
+            "how-to-get-rid-of-flies-in-house",
+            "how-to-get-rid-of-flies-outside",
+            "how-to-get-rid-of-fruit-flies-in-house",
+            "how-to-get-rid-of-flies-in-kitchen",
+            "how-to-get-rid-of-flies-in-bathroom",
+            "how-to-get-rid-of-flies-in-yard",
+            "how-to-get-rid-of-flies-in-backyard",
+            "how-to-get-rid-of-flies-indoors",
+            "how-to-get-rid-of-cluster-flies",
+            "how-to-get-rid-of-horse-flies",
+            "how-to-get-rid-of-white-flies",
+            "how-to-get-rid-of-small-flies",
+            "how-to-get-rid-of-tiny-flies",
+            "how-to-get-rid-of-flies-fast",
+            "how-to-get-rid-of-flies-naturally",
+            "how-to-get-rid-of-flies-quickly",
+            "how-to-get-rid-of-flies-permanently",
+            "how-to-get-rid-of-flies-at-home"
+        ].map(slug => ({
+            url: `${baseUrl}/${slug}`,
+            lastModified: new Date('2026-03-06'),
+            changeFrequency: 'monthly' as const,
+            priority: 0.7,
+        }))
     ];
 }
