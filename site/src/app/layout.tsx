@@ -30,12 +30,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6155455223911546"
-          crossOrigin="anonymous"
-          strategy="beforeInteractive"
-        />
       </head>
       <body className={`${inter.className} min-h-screen bg-background flex flex-col font-sans antialiased text-foreground relative`}>
         <div className="fixed inset-0 z-0 pointer-events-none opacity-80">

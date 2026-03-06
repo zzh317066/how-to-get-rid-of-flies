@@ -87,7 +87,7 @@ export default async function PersonalizedPlanPage() {
                                 </CardContent>
                                 <CardFooter className="pb-8 pt-6 flex-col space-y-4">
                                     <Button asChild size="lg" className="w-full max-w-sm text-lg rounded-full shadow-md transition-transform hover:-translate-y-1">
-                                        <a href={process.env.NEXT_PUBLIC_CREEM_PRODUCT_LINK || "https://www.creem.io/test/payment/prod_RpM6A9pJMGWKllhZF3wUS"}>
+                                        <a href={process.env.NEXT_PUBLIC_CREEM_PRODUCT_LINK || "https://www.creem.io/payment/prod_15b3ud6YLosovRKumoFgUR"}>
                                             Unlock the Generator Now
                                         </a>
                                     </Button>

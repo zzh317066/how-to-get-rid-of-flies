@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { UpsellCta } from "@/components/shared/upsell-cta";
 import { Faq } from "@/components/shared/faq";
 import { Card, CardContent } from "@/components/ui/card";
+import { AdSense } from "@/components/shared/adsense";
 
 export const metadata: Metadata = {
     title: "How to Get Rid of Drain Flies by Cleaning the Source | FlyAway Guide",
@@ -165,6 +166,7 @@ export default function DrainFliesPage() {
             <div className="container py-8 text-center border-t">
                 <Link href="/" className="text-primary hover:underline font-medium">&larr; Back to Main Guide</Link>
             </div>
+            <AdSense />
         </div>
     );
 }

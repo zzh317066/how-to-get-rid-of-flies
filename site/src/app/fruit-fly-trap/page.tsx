@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { UpsellCta } from "@/components/shared/upsell-cta";
 import { Faq } from "@/components/shared/faq";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { AdSense } from "@/components/shared/adsense";
 
 export const metadata: Metadata = {
     title: "Best Fruit Fly Trap Methods | DIY & Store-Bought | FlyAway Guide",
@@ -209,6 +210,7 @@ export default function TrapPage() {
                 <Link href="/fruit-flies" className="text-primary hover:underline font-medium">&larr; Back to Fruit Flies Guide</Link>
                 <Link href="/" className="text-muted-foreground hover:underline text-sm">Back to Main Content</Link>
             </div>
+            <AdSense />
         </div>
     );
 }

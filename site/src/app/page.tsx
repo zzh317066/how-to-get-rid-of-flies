@@ -8,6 +8,7 @@ import { Faq } from "@/components/shared/faq";
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter, CardContent } from "@/components/ui/card";
 import { CheckCircle2, Shield } from "lucide-react";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
+import { AdSense } from "@/components/shared/adsense";
 
 const FlyIdentifierForm = dynamic(
   () =>
@@ -277,6 +278,7 @@ export default function Home() {
 
       {/* 8. FAQ */}
       <Faq items={faqs} />
+      <AdSense />
     </div>
   );
 }
