@@ -11,10 +11,10 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   metadataBase: new URL('https://howtogetridofflies.top'),
   title: 'FlyAway Guide | How to Get Rid of Flies Fast',
-  description: 'Identify the type of flies in your home and remove them fast with our tailored removal guides and AI identifier.',
+  description: 'Identify the specific type of flies in your home and remove them permanently. Use our expert removal guides and AI identifier to get a customized action plan.',
   openGraph: {
     title: 'FlyAway Guide | How to Get Rid of Flies Fast',
-    description: 'Identify the type of flies in your home and remove them fast with our tailored removal guides and AI identifier.',
+    description: 'Identify the specific type of flies in your home and remove them permanently. Use our expert removal guides and AI identifier to get a customized action plan.',
     url: 'https://howtogetridofflies.top',
     siteName: 'FlyAway Guide',
     locale: 'en_US',

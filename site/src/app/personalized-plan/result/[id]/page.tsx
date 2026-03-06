@@ -6,8 +6,8 @@ import { PlanResultClient } from "@/components/features/identifier/plan-result-c
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-    title: "Your Custom Fly Removal Plan Result",
-    description: "View your customized fly removal action-plan here.",
+    title: "Your Custom Fly Removal Plan | FlyAway Guide",
+    description: "View your customized fly removal action-plan here. Follow our specific, step-by-step instructions to eliminate your fly infestation fast and permanently.",
     robots: {
         index: false,
         follow: false,

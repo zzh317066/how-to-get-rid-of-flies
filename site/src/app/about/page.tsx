@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
     title: 'About Us | FlyAway Guide',
-    description: 'Learn about the mission behind FlyAway Guide and how we help homeowners eliminate fly infestations quickly and safely.',
+    description: 'Learn about the mission behind FlyAway Guide. Discover how our expert advice and AI identification tools help homeowners eliminate fly infestations quickly and safely.',
     alternates: {
         canonical: '/about',
     },

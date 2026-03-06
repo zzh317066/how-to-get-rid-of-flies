@@ -8,7 +8,7 @@ import { AdSense } from "@/components/shared/adsense";
 
 export const metadata: Metadata = {
     title: "How to Get Rid of House Flies Fast | FlyAway Guide",
-    description: "Learn how to get rid of house flies fast, understand why they keep coming back, and keep house flies away naturally.",
+    description: "Struggling with house flies? Learn how to get rid of them fast, understand the hidden reasons they keep returning, and explore highly effective natural repellents.",
     alternates: {
         canonical: '/house-flies',
     },

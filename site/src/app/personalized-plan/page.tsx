@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 export const metadata: Metadata = {
     title: "Your Custom Fly Removal Plan | FlyAway Guide",
-    description: "Get a customized, step-by-step action plan to remove flies from your home based on your unique situation and preferences.",
+    description: "Get a customized, step-by-step action plan to completely remove flies from your home. Our AI analyzes your unique situation to provide exact treatment steps.",
     alternates: {
         canonical: '/personalized-plan',
     },

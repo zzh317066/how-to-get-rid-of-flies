@@ -8,7 +8,7 @@ import { AdSense } from "@/components/shared/adsense";
 
 export const metadata: Metadata = {
     title: "How to Get Rid of Drain Flies by Cleaning the Source | FlyAway Guide",
-    description: "Learn how to get rid of drain flies by treating the source in sinks, drains, and damp areas — not just killing the ones you see.",
+    description: "Discover how to completely eradicate drain flies (moth flies) by treating the root cause in sinks, pipes, and damp areas, going beyond just killing adults.",
     alternates: {
         canonical: '/drain-flies',
     },

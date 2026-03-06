@@ -8,7 +8,7 @@ import { AdSense } from "@/components/shared/adsense";
 
 export const metadata: Metadata = {
     title: "Best Fruit Fly Trap Methods | DIY & Store-Bought | FlyAway Guide",
-    description: "Discover the best fruit fly trap solutions. Learn how to make an effective apple cider vinegar trap or choose a reliable commercial option.",
+    description: "Find the absolute best fruit fly trap solutions here. Learn exactly how to make a highly effective DIY apple cider vinegar trap or choose commercial options.",
     alternates: {
         canonical: '/fruit-fly-trap',
     },

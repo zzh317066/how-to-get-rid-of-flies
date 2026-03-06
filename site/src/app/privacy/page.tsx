@@ -1,8 +1,7 @@
 import { Metadata } from 'next';
-
 export const metadata: Metadata = {
     title: 'Privacy Policy | FlyAway Guide',
-    description: 'Learn how FlyAway Guide respects your privacy, handles your data, and partners with third-party vendors for advertising.',
+    description: 'Read the FlyAway Guide Privacy Policy. Learn exactly how we respect your privacy, carefully handle your data, and partner with third-party vendors for advertising.',
     alternates: {
         canonical: '/privacy',
     },

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Contact Us | FlyAway Guide',
-    description: 'Get in touch with the FlyAway Guide team for questions, feedback, or business inquiries.',
+    description: 'Get in touch with the FlyAway Guide team. Whether you have questions about fly identification, site feedback, or business inquiries, we are here to help you out.',
     alternates: {
         canonical: '/contact',
     },

@@ -8,7 +8,7 @@ import { AdSense } from "@/components/shared/adsense";
 
 export const metadata: Metadata = {
     title: "How to Get Rid of Fruit Flies Fast | FlyAway Guide",
-    description: "Learn how to get rid of fruit flies fast, what causes them, which traps work, and how to keep them from coming back.",
+    description: "Learn how to get rid of fruit flies fast and permanently. We cover identifying causes, the most effective DIY traps, and strategies to prevent re-infestations.",
     alternates: {
         canonical: '/fruit-flies',
     },

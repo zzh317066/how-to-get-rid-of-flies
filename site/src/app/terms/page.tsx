@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
     title: 'Terms of Service | FlyAway Guide',
-    description: 'Read the terms and conditions for using FlyAway Guide.',
+    description: 'Read the Terms of Service for using FlyAway Guide. Review our guidelines for accessing our content, utilizing our AI tools, and our legal disclaimers.',
     alternates: {
         canonical: '/terms',
     },
