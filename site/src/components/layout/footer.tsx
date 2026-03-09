@@ -11,6 +11,13 @@ export function Footer() {
                 </div>
                 <div className="flex items-center justify-center space-x-4">
                     <Link
+                        href="/guides"
+                        className="text-sm text-muted-foreground underline-offset-4 hover:underline"
+                    >
+                        Guides Archive
+                    </Link>
+                    <span className="text-muted-foreground/30 hidden md:inline">|</span>
+                    <Link
                         href="/about"
                         className="text-sm text-muted-foreground underline-offset-4 hover:underline"
                     >

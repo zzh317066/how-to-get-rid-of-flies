@@ -54,6 +54,13 @@ export function Header() {
             >
               Traps
             </Link>
+            <Link
+              prefetch={false}
+              href="/guides"
+              className="px-3 py-2 text-sm font-medium transition-colors hover:text-foreground/80 text-foreground/60 rounded-md hover:bg-accent hover:text-accent-foreground"
+            >
+              All Guides
+            </Link>
           </nav>
           <div className="hidden sm:flex items-center space-x-2">
             <Button asChild variant="secondary" className="font-semibold text-primary bg-primary/10 hover:bg-primary/20">
